@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="account-section">
+    <div class="site-map" id="site-map">
+      <nav>
+        <a href="/index">Главная</a>
+        <a href="/cart">Корзина</a>
+      </nav>
+    </div>
+
+    <h2>Личный кабинет</h2>
+    <!-- Карта сайта -->
+
+    <!-- Информация о пользователе -->
+    <div class="account-info">
+      <h3>Информация о пользователе</h3>
+      <p><strong>Имя пользователя:</strong> Иван Иванов</p>
+      <p><strong>Электронная почта:</strong> ivanov@example.com</p>
+      <p><strong>Номер телефона:</strong> +7 999 123 45 67</p>
+      <!-- Кнопка для редактирования данных пользователя -->
+      <a href="/edit-profile" class="edit-button">Редактировать данные</a>
+    </div>
+
+    <!-- История заказов -->
+    <div class="order-history">
+      <h3>История заказов</h3>
+      <ul class="order-list">
+        <li class="order-item">
+          <span class="order-id">Заказ №12345</span>
+          <span class="order-date">12 ноября 2024</span>
+          <span class="order-status">В процессе</span>
+          <a href="/order" class="view-order">Просмотреть</a>
+        </li>
+        <li class="order-item">
+          <span class="order-id">Заказ №12344</span>
+          <span class="order-date">10 ноября 2024</span>
+          <span class="order-status">Доставлен</span>
+          <a href="/order" class="view-order">Просмотреть</a>
+        </li>
+        <li class="order-item">
+          <span class="order-id">Заказ №12343</span>
+          <span class="order-date">5 ноября 2024</span>
+          <span class="order-status">Отменен</span>
+          <a href="/order" class="view-order">Просмотреть</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Кнопка выхода -->
+    <div class="logout">
+      <a href="/logout" class="logout-button">Выйти</a>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="order-details-section">
+    <h2>Детали заказа</h2>
+
+    <!-- Информация о заказе -->
+    <div class="order-info">
+      <p><strong>Номер заказа:</strong> 1</p>
+      <p><strong>Дата заказа:</strong> 11.01.2011</p>
+      <p><strong>Статус:</strong> Отмена</p>
+    </div>
+
+    <!-- Список товаров в заказе -->
+    <div class="order-items">
+      <h3>Товары в заказе</h3>
+      <ul class="item-list">
+          <li class="item">
+            <span class="item-name">Товар 1</span>
+            <span class="item-quantity">Сколько-то шт.</span>
+            <span class="item-price">999 руб.</span>
+          </li>
+          <li class="item">
+            <span class="item-name">Товар </span>
+            <span class="item-quantity">Сколько-то шт.</span>
+            <span class="item-price">999 руб.</span>
+          </li>
+          <li class="item">
+            <span class="item-name">Товар </span>
+            <span class="item-quantity">Сколько-то шт.</span>
+            <span class="item-price">999 руб.</span>
+          </li>
+          <li class="item">
+            <span class="item-name">Товар </span>
+            <span class="item-quantity">Сколько-то шт.</span>
+            <span class="item-price">999 руб.</span>
+          </li>
+      </ul>
+    </div>
+
+    <!-- Итоговая сумма -->
+    <div class="order-total">
+      <p><strong>Общая сумма:</strong> 99999 руб.</p>
+    </div>
+
+    <!-- Кнопка возврата -->
+    <div class="back-button">
+      <a href="/profile" class="button">Вернуться к истории заказов</a>
+    </div>
+  </section>
+{% endblock %}

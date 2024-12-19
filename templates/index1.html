@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .button:active {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать в панель управления</h1>
+        <a href="/customers" class="button">Покупатели</a>
+        <a href="/products" class="button">Список товаров</a>
+        <a href="/orders" class="button">Заказы</a>
+        <a href="/employees" class="button">Сотрудники</a>
+        <a href="/categories" class="button">Категории</a>
+    </div>
+</body>
+</html>

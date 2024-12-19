@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Карта сайта сверху -->
+  <nav class="site-map">
+    <ul>
+      <li><a href="/">Главная</a></li>
+      <li><a href="/catalog">Каталог</a></li>
+      <li><a href="/cart">Корзина</a></li>
+      <li><a href="/profile">Личный кабинет</a></li>
+    </ul>
+  </nav>
+
+  <!-- Карточка товара -->
+  <section class="product-card">
+    <div class="product-image">
+      <img src="https://via.placeholder.com/300" alt="Product Image">
+    </div>
+    <div class="product-info">
+      <h2>Название товара</h2>
+      <p class="product-price">Цена: 2 500 ₽</p>
+      <p class="product-description">Описание товара. Здесь может быть краткая информация о характеристиках, преимуществах и других деталях продукта. Примерный текст для макета страницы.</p>
+      <div class="product-buttons">
+        <a href="#" class="add-to-cart-button">Добавить в корзину</a>
+        <a href="#" class="wishlist-button">Добавить в избранное</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция похожих товаров -->
+  <section class="related-products">
+    <h3>Похожие товары</h3>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="https://via.placeholder.com/150" alt="Related Product 1">
+        <h4>Товар 1</h4>
+        <p>Цена: 2 000 ₽</p>
+        <a href="#" class="add-to-cart-button">Добавить в корзину</a>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/150" alt="Related Product 2">
+        <h4>Товар 2</h4>
+        <p>Цена: 1 800 ₽</p>
+        <a href="#" class="add-to-cart-button">Добавить в корзину</a>
+      </div>
+      <div class="product-item">
+        <img src="https://via.placeholder.com/150" alt="Related Product 3">
+        <h4>Товар 3</h4>
+        <p>Цена: 2 300 ₽</p>
+        <a href="#" class="add-to-cart-button">Добавить в корзину</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    <p>&copy; 2024 Мой магазин. Все права защищены.</p>
+    <ul>
+      <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
+      <li><a href="/terms-of-service">Условия обслуживания</a></li>
+      <li><a href="/contact">Контакты</a></li>
+    </ul>
+  </footer>
+
+{% endblock %}

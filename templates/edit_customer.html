@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать клиента</title>
+</head>
+<body>
+    <h1>Редактировать информацию о клиенте</h1>
+    <form method="POST">
+        <label for="CustomerName">Имя:</label>
+        <input type="text" id="CustomerName" name="CustomerName" value="{{ customer.CustomerName }}" required><br><br>
+
+        <label for="CustomerSurname">Фамилия:</label>
+        <input type="text" id="CustomerSurname" name="CustomerSurname" value="{{ customer.CustomerSurname }}" required><br><br>
+
+        <label for="ContactNumber">Контактный номер:</label>
+        <input type="text" id="ContactNumber" name="ContactNumber" value="{{ customer.ContactNumber }}"><br><br>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" value="{{ customer.Email }}"><br><br>
+
+        <label for="Address">Адрес:</label>
+        <input type="text" id="Address" name="Address" value="{{ customer.Address }}"><br><br>
+
+        <button type="submit">Обновить</button>
+    </form>
+</body>
+</html>

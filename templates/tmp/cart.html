@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="cart-section">
+    <h2>Корзина</h2>
+
+    <!-- Заглушка для товаров в корзине -->
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/80" alt="Product Image" class="cart-item-image">
+        <div class="cart-item-info">
+          <h3>Товар 1</h3>
+          <p class="item-price">Цена: 1 200 ₽</p>
+          <p>Количество: 2</p>
+          <p class="remove-item">Удалить</p>
+        </div>
+        <p class="item-total-price">Итого: 2 400 ₽</p>
+      </div>
+
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/80" alt="Product Image" class="cart-item-image">
+        <div class="cart-item-info">
+          <h3>Товар 2</h3>
+          <p class="item-price">Цена: 800 ₽</p>
+          <p>Количество: 1</p>
+          <p class="remove-item">Удалить</p>
+        </div>
+        <p class="item-total-price">Итого: 800 ₽</p>
+      </div>
+    </div>
+
+    <!-- Общая сумма и кнопка оформления заказа -->
+    <div class="cart-summary">
+      <p>Общая сумма: 3 200 ₽</p>
+      <a href="#" class="checkout-button">Оформить заказ</a>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать заказ</title>
+</head>
+<body>
+    <h1>Редактировать заказ</h1>
+    <form method="POST" action="{{ url_for('edit_order', order_id=order['OrderID']) }}">
+        <label for="order_date">Дата заказа:</label>
+        <input type="date" name="order_date" value="{{ order['OrderDate'] }}" required><br>
+
+        <label for="customer_id">CustomerID:</label>
+        <input type="number" name="customer_id" value="{{ order['CustomerID'] }}" required><br>
+
+        <label for="employee_id">EmployeeID:</label>
+        <input type="number" name="employee_id" value="{{ order['EmployeeID'] }}" required><br>
+
+        <label for="product_id">ProductID:</label>
+        <input type="number" name="product_id" value="{{ order['ProductID'] }}" required><br>
+
+        <label for="quantity">Количество:</label>
+        <input type="number" name="quantity" value="{{ order['Quantity'] }}" required><br>
+
+        <label for="total_amount">Общая сумма:</label>
+        <input type="number" name="total_amount" step="0.01" value="{{ order['TotalAmount'] }}" required><br>
+
+        <button type="submit">Обновить заказ</button>
+    </form>
+</body>
+</html>

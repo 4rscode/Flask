@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить сотрудника</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; }
+        form { max-width: 500px; margin: 50px auto; padding: 20px; background: white; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); border-radius: 10px; }
+        input, button { width: 100%; margin-bottom: 10px; padding: 10px; }
+        button { background-color: #28a745; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <h2>Добавить сотрудника</h2>
+        <input type="text" name="employee_name" placeholder="Имя" required>
+        <input type="text" name="employee_surname" placeholder="Фамилия" required>
+        <input type="text" name="position" placeholder="Должность">
+        <input type="text" name="contact_number" placeholder="Контактный номер">
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>

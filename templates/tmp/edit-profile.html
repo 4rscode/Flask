@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="edit-profile-section">
+    <h2>Редактирование данных</h2>
+
+    <!-- Форма редактирования данных -->
+    <form action="/update-profile" method="POST" class="edit-profile-form">
+      <div class="form-group">
+        <label for="username">Имя пользователя</label>
+        <input type="text" id="username" name="username" value="Иван Иванов" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Электронная почта</label>
+        <input type="email" id="email" name="email" value="ivanov@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Номер телефона</label>
+        <input type="tel" id="phone" name="phone" value="+7 999 123 45 67" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="submit-button">Сохранить изменения</button>
+      </div>
+    </form>
+
+    <!-- Кнопка возврата в личный кабинет -->
+    <div class="back-button">
+      <a href="/profile" class="back-to-account">Вернуться в личный кабинет</a>
+    </div>
+  </section>
+{% endblock %}

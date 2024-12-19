@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperMarket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- Плашка поиска товаров -->
+  <div class="search-bar">
+     <!-- Логотип (он будет скрываться при прокрутке) -->
+    <div class="logo-placeholder">SuperMarket</div>
+
+    <!-- Поле поиска -->
+    <input type="text" placeholder="Поиск товаров..." id="search-input">
+    <button type="button">Поиск</button>
+
+  </div>
+
+  <!-- Карта сайта -->
+  <div class="site-map" id="site-map">
+    <nav>
+      <a href="/profile">Личный кабинет</a>
+      <a href="/cart">Корзина</a>
+    </nav>
+  </div>
+
+  <div class="container">
+
+  <!-- Основное содержимое -->
+  <div class="content">
+    <!-- Блок "Популярные категории" -->
+    <div class="categories">
+      <h3>Популярные категории</h3>
+      <div class="category-slider">
+        <button class="prev" onclick="scrollCategory('prev')">←</button>
+        <div class="category-list">
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Продукты питания">
+            <h4>Продукты питания</h4>
+            <p>Товары для вашего стола.</p>
+          </div>
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Бытовая химия">
+            <h4>Бытовая химия</h4>
+            <p>Чистота в вашем доме.</p>
+          </div>
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Косметика">
+            <h4>Косметика</h4>
+            <p>Уход за собой.</p>
+          </div>
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Электроника">
+            <h4>Электроника</h4>
+            <p>Технологии для вашего удобства.</p>
+          </div>
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Одежда">
+            <h4>Одежда</h4>
+            <p>Модные тенденции.</p>
+          </div>
+          <div class="category-item">
+            <img src="https://via.placeholder.com/150" alt="Одежда">
+            <h4>Сибз</h4>
+            <p>Модные тенденции.</p>
+          </div>
+
+        </div>
+        <button class="next" onclick="scrollCategory('next')">→</button>
+      </div>
+    </div>
+
+    <!-- Блок "Популярные товары" -->
+    <div class="popular-items">
+      <h3>Популярные товары</h3>
+      <div class="products-slider">
+        <button class="prev" onclick="scrollProduct('prev')">←</button>
+        <div class="category-list">
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 1">
+            <h4>Товар 1</h4>
+            <p>Описание товара 1.</p>
+            <span>Цена: 1000₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 2">
+            <h4>Товар 2</h4>
+            <p>Описание товара 2.</p>
+            <span>Цена: 1500₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 3">
+            <h4>Товар 3</h4>
+            <p>Описание товара 3.</p>
+            <span>Цена: 2000₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 4">
+            <h4>Товар 4</h4>
+            <p>Описание товара 4.</p>
+            <span>Цена: 1200₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 5">
+            <h4>Товар 5</h4>
+            <p>Описание товара 5.</p>
+            <span>Цена: 1800₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+          <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Товар 6">
+            <h4>Товар 6</h4>
+            <p>Описание товара 6.</p>
+            <span>Цена: 1800₽</span>
+            <button class="add-to-cart">Добавить в корзину</button>
+          </div>
+        </div>
+        <button class="next" onclick="scrollProduct('next')">→</button>
+      </div>
+    </div>
+
+    <!-- Блок "Акции и скидки" -->
+    <div class="discounts">
+      <h3>Акции и скидки</h3>
+      <div class="discount-slider">
+        <button class="prev" onclick="scrollDiscount('prev')">←</button>
+        <div class="discount-list">
+          <div class="discount-item">
+            <img src="https://via.placeholder.com/150" alt="Скидка на молочные продукты">
+            <h4>Скидка на молочные продукты</h4>
+            <p>Скидка 10% на все молочные продукты.</p>
+          </div>
+          <div class="discount-item">
+            <img src="https://via.placeholder.com/150" alt="Скидка на бытовую химию">
+            <h4>Скидка на бытовую химию</h4>
+            <p>Акция на бытовую химию — скидка до 20%.</p>
+          </div>
+          <div class="discount-item">
+            <img src="https://via.placeholder.com/150" alt="Скидка на косметику">
+            <h4>Скидка на косметику</h4>
+            <p>Косметика со скидкой 15%.</p>
+          </div>
+          <div class="discount-item">
+            <img src="https://via.placeholder.com/150" alt="Скидка на одежду">
+            <h4>Скидка на одежду</h4>
+            <p>Весенние скидки на одежду — до 30%!</p>
+          </div>
+          <div class="discount-item">
+            <img src="https://via.placeholder.com/150" alt="Скидка на игрушки">
+            <h4>Скидка на игрушки</h4>
+            <p>Игрушки с 10% скидкой.</p>
+          </div>
+        </div>
+        <button class="next" onclick="scrollDiscount('next')">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+
+<!-- Конец страницы -->
+<footer>
+  <div class="footer-container">
+    <div class="company-info">
+      <h3>О компании</h3>
+      <p>Мы являемся ведущим ритейлером в сфере онлайн-магазинов, предлагая широкий ассортимент товаров по конкурентоспособным ценам. Наша миссия — сделать покупки удобными и доступными для всех.</p>
+    </div>
+
+    <div class="contact-info">
+      <h3>Контакты</h3>
+      <ul>
+        <li>Телефон: +1 234 567 890</li>
+        <li>Email: contact@company.com</li>
+        <li>Адрес: 123 Example Street, City, Country</li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Полезные ссылки</h3>
+      <ul>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Условия использования</a></li>
+        <li><a href="#">Помощь</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 SuperMarket. Все права защищены.</p>
+  </div>
+</footer>
+
+</html>
+
+
+{% endblock %}
